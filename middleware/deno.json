@@ -1,0 +1,10 @@
+{
+    "name": "@sir/wfd-middleware",
+    "version": "0.1.0",
+    "description": "Middleware module for the Web Framework for Deno",
+    "license": "Apache-2.0",
+    "exports": "./mod.ts",
+    "imports": {
+        "@sir/wfd-types": "jsr:@sir/wfd-types@^0.1.0"
+    }
+}

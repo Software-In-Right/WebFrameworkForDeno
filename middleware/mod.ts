@@ -1,5 +1,45 @@
-import { Middleware } from "./Middleware";
-import { RequestCursor } from "./RequestCursor";
+/**
+ * This module provides a middleware pipeline for processing HTTP requests
+ * for a deno server.
+ * 
+ * @example
+ * ```ts
+ * import type { HttpContext, Middleware, RequestCursor } from "~framework";
+
+ * export const DurationMiddleware: Middleware = async (context: HttpContext, next: RequestCursor) => {
+ *     const startTime = new Date();
+
+ *     await next();
+
+ *     const endTime = new Date();
+
+ *     const duration = endTime.getTime() - startTime.getTime();
+
+ *     const updatedHeaders: HeadersInit = {
+ *         ...context.response.headers,
+ *         'Request-Duration': duration.toString() + 'ms'
+ *     }
+
+ *     context.response.headers = updatedHeaders;
+ * }
+ * ```
+ * 
+ * @example
+ * ```ts
+ * import { addMiddleware, runMiddleware } from "@sir/wfd-middleware";
+ * import { DurationMiddleware } from "./DurationMiddleware.ts";
+ * 
+ * addMiddleware(DurationMiddleware);
+ * 
+ * Deno.serve((request) => await runMiddleware(request));
+ * ```
+ * 
+ * @module
+ */
+
+import type { HttpContext } from "@sir/wfd-types";
+import type { Middleware } from "./Middleware";
+import type { RequestCursor } from "./RequestCursor";
 
 const middlewareFunctions: Middleware[] = [];
 

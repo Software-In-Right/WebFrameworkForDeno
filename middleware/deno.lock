@@ -1,0 +1,16 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@sir/wfd-types@0.1": "0.1.0"
+  },
+  "jsr": {
+    "@sir/wfd-types@0.1.0": {
+      "integrity": "1d153feb48f1e4dddf560ef072c2f6ed2caf0d385d437231dd58bb46865c8a13"
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@sir/wfd-types@0.1"
+    ]
+  }
+}
