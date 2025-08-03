@@ -36,7 +36,7 @@ async function executeMiddleware(context: HttpContext, next: RequestCursor) {
  * @param middleware The next piece of middleware to add to the pipeline. Order
  *                   is FIFO.
  */
-export function addMiddleware(middleware: Middleware) {
+export function addMiddleware(middleware: Middleware): void {
     middlewareFunctions.push(middleware);
 }
 

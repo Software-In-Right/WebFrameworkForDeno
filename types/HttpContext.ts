@@ -1,5 +1,5 @@
-import { HttpRequest } from "./HttpRequest";
-import { HttpResponse } from "./HttpResponse";
+import { HttpRequest } from "./HttpRequest.ts";
+import { HttpResponse } from "./HttpResponse.ts";
 
 /**
  * The current context used to manage an HTTP request/response from the server.
