@@ -38,8 +38,8 @@
  */
 
 import type { HttpContext } from "@sir/wfd-types";
-import type { Middleware } from "./Middleware";
-import type { RequestCursor } from "./RequestCursor";
+import type { Middleware } from "./Middleware.ts";
+import type { RequestCursor } from "./RequestCursor.ts";
 
 const middlewareFunctions: Middleware[] = [];
 

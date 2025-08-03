@@ -1,5 +1,5 @@
 import type { HttpContext } from "@sir/wfd-types";
-import type { RequestCursor } from "./RequestCursor";
+import type { RequestCursor } from "./RequestCursor.ts";
 
 /**
  * Represents a middleware function for building a request/response pipeline.
