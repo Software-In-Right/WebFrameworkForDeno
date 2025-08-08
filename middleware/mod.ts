@@ -4,8 +4,9 @@
  * 
  * @example
  * ```ts
- * import type { HttpContext, Middleware, RequestCursor } from "~framework";
-
+ * import type { Middleware, RequestCursor } from "@sir/wfd-middleware";
+ * import type { HttpContext } from "@sir/wfd-types";
+ * 
  * export const DurationMiddleware: Middleware = async (context: HttpContext, next: RequestCursor) => {
  *     const startTime = new Date();
 
