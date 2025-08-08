@@ -107,3 +107,5 @@ export async function runMiddleware(request: Request): Promise<Response> {
         statusText: response.statusText
     });
 }
+
+export type { Middleware, RequestCursor };
