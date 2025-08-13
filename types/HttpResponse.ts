@@ -13,7 +13,7 @@ export interface HttpResponse {
     /**
      * Headers to return on the response.
      */
-    headers: HeadersInit;
+    headers?: HeadersInit;
 
     /**
      * The response status.
